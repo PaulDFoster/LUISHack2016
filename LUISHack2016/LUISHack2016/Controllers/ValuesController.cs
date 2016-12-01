@@ -20,11 +20,11 @@ namespace LUISHack2016.Controllers
         {
             return "value";
         }
-        public string Get(string location)
+        public string Get(string destination, string origin)
         {
             // Looking up the NR Darwin information for location value.
 
-            return "Cambridge";
+            return origin + " to " + destination;
         }
 
         // POST api/values

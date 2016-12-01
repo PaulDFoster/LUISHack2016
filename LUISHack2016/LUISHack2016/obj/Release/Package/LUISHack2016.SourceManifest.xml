@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="c:\users\paulfo\documents\visual studio 2015\Projects\LUISHack2016\LUISHack2016\obj\Release\Package\PackageTmp" />
-  <setAcl path="c:\users\paulfo\documents\visual studio 2015\Projects\LUISHack2016\LUISHack2016\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
-  <setAcl path="c:\users\paulfo\documents\visual studio 2015\Projects\LUISHack2016\LUISHack2016\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+  <IisApp path="C:\Users\paulfo\Documents\GitHub\LUISHack2016\LUISHack2016\LUISHack2016\obj\Release\Package\PackageTmp" />
+  <setAcl path="C:\Users\paulfo\Documents\GitHub\LUISHack2016\LUISHack2016\LUISHack2016\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\paulfo\Documents\GitHub\LUISHack2016\LUISHack2016\LUISHack2016\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
 </sitemanifest>
