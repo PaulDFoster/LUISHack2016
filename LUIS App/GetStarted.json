@@ -1,0 +1,108 @@
+{
+  "luis_schema_version": "1.3.0",
+  "name": "GetStarted",
+  "desc": "An example app for 2016 DX Hackathon exploring the new LUIS functions",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "NextTrainTo"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [
+    {
+      "name": "location"
+    }
+  ],
+  "composites": [],
+  "bing_entities": [],
+  "actions": [
+    {
+      "actionName": "NextTrainTo",
+      "intentName": "NextTrainTo",
+      "channel": {
+        "Name": "Http",
+        "Method": "JsonRequest",
+        "Settings": [
+          {
+            "Name": "Verb",
+            "Value": "GET"
+          },
+          {
+            "Name": "Url",
+            "Value": "http://LUISHack2016.azurewebsites.net/api/Values?location={location}"
+          },
+          {
+            "Name": "Body",
+            "Value": ""
+          },
+          {
+            "Name": "Password",
+            "Value": ""
+          },
+          {
+            "Name": "ResponseTemplate",
+            "Value": ""
+          },
+          {
+            "Name": "Username",
+            "Value": ""
+          }
+        ]
+      },
+      "actionParameters": [
+        {
+          "parameterName": "location",
+          "entityName": "location",
+          "required": true,
+          "question": "Which place?",
+          "phraseListFeatureName": null
+        }
+      ]
+    }
+  ],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "what is the next train to noriwch",
+      "intent": "NextTrainTo",
+      "entities": []
+    },
+    {
+      "text": "what is the next train to diss",
+      "intent": "NextTrainTo",
+      "entities": [
+        {
+          "entity": "location",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "what is the next train to norwich",
+      "intent": "NextTrainTo",
+      "entities": [
+        {
+          "entity": "location",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "what is the next train to bristol",
+      "intent": "NextTrainTo",
+      "entities": [
+        {
+          "entity": "location",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    }
+  ]
+}
