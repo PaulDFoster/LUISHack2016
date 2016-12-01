@@ -87,7 +87,7 @@
   "regex_features": [],
   "utterances": [
     {
-      "text": "what is the next train to noriwch",
+      "text": "what is the next train to norwich",
       "intent": "NextTrainTo",
       "entities": [
         {
@@ -98,7 +98,18 @@
       ]
     },
     {
-      "text": "what is the next train to diss",
+        "text": "what is the next train to diss",
+        "intent": "NextTrainTo",
+        "entities": [
+            {
+                "entity": "Station",
+                "startPos": 6,
+                "endPos": 6
+            }
+        ]
+    },
+    {
+      "text": "when is the next train to diss",
       "intent": "NextTrainTo",
       "entities": [
         {
@@ -120,20 +131,26 @@
       ]
     },
     {
-      "text": "what is the next train to bristol",
+        "text": "what is the next train to bristol parkway",
+        "intent": "NextTrainTo",
+        "entities": [
+            {
+                "entity": "Station",
+                "startPos": 6,
+                "endPos": 7
+            }
+        ]
+    },
+    {
+      "text": "when is the next train to bristol parkway",
       "intent": "NextTrainTo",
       "entities": [
         {
           "entity": "Station",
           "startPos": 6,
-          "endPos": 6
+          "endPos": 7
         }
       ]
-    },
-    {
-      "text": "next train to",
-      "intent": "NextTrainTo",
-      "entities": []
     },
     {
       "text": "next train to diss",
@@ -147,23 +164,13 @@
       ]
     },
     {
-      "text": "what is the next train to",
-      "intent": "NextTrainTo",
-      "entities": []
-    },
-    {
-      "text": "next train",
-      "intent": "NextTrainTo",
-      "entities": []
-    },
-    {
-      "text": "what is the next train to london",
+      "text": "what is the next train to london waterloo",
       "intent": "NextTrainTo",
       "entities": [
         {
           "entity": "Station",
           "startPos": 6,
-          "endPos": 6
+          "endPos": 7
         }
       ]
     },
@@ -191,22 +198,6 @@
           "entity": "Station",
           "startPos": 5,
           "endPos": 5
-        }
-      ]
-    },
-    {
-      "text": "i'min cambridge, what is the next train to diss",
-      "intent": "NextTrainTo",
-      "entities": [
-        {
-          "entity": "Station",
-          "startPos": 3,
-          "endPos": 3
-        },
-        {
-          "entity": "Station",
-          "startPos": 11,
-          "endPos": 11
         }
       ]
     },
@@ -243,23 +234,23 @@
       ]
     },
     {
-      "text": "nextg train to london from cheltenham",
+      "text": "next train to london waterloo from cheltenham spa",
       "intent": "NextTrainTo",
       "entities": [
         {
           "entity": "Station",
           "startPos": 3,
-          "endPos": 3
+          "endPos": 4
         },
         {
           "entity": "Station",
-          "startPos": 5,
-          "endPos": 5
+          "startPos": 6,
+          "endPos": 7
         }
       ]
     },
     {
-      "text": "next train from nowich to london",
+      "text": "next train from norwich to london waterloo",
       "intent": "NextTrainTo",
       "entities": [
         {
@@ -270,7 +261,7 @@
         {
           "entity": "Station",
           "startPos": 5,
-          "endPos": 5
+          "endPos": 6
         }
       ]
     },
@@ -291,7 +282,7 @@
       ]
     },
     {
-      "text": "give me the next train from diss to london",
+      "text": "give me the next train from diss to london waterloo",
       "intent": "NextTrainTo",
       "entities": [
         {
@@ -302,12 +293,12 @@
         {
           "entity": "Station",
           "startPos": 8,
-          "endPos": 8
+          "endPos": 9
         }
       ]
     },
     {
-      "text": "when is the next train from reading to london",
+      "text": "when is the next train from reading to london waterloo",
       "intent": "NextTrainTo",
       "entities": [
         {
@@ -318,12 +309,12 @@
         {
           "entity": "Station",
           "startPos": 8,
-          "endPos": 8
+          "endPos": 9
         }
       ]
     },
     {
-      "text": "when is the next train from cambridge to london",
+      "text": "when is the next train from cambridge to london waterloo",
       "intent": "NextTrainTo",
       "entities": [
         {
@@ -334,25 +325,41 @@
         {
           "entity": "Station",
           "startPos": 8,
-          "endPos": 8
+          "endPos": 9
         }
       ]
     },
     {
-      "text": "next train to glasgow from london",
+      "text": "next train to glasgow central from london waterloo",
       "intent": "NextTrainTo",
       "entities": [
         {
           "entity": "Station",
           "startPos": 3,
-          "endPos": 3
+          "endPos": 4
         },
         {
           "entity": "Station",
-          "startPos": 5,
-          "endPos": 5
+          "startPos": 6,
+          "endPos": 7
         }
       ]
+    },
+    {
+        "text": "next train",
+        "intent": "NextTrainTo",
+        "entities": [ ]
+    },
+    {
+        "text": "next train from london waterloo",
+        "intent": "NextTrainTo",
+        "entities": [
+            {
+                "entity": "Station",
+                "startPos": 3,
+                "endPos": 4
+            }
+        ]
     },
     {
       "text": "next train to cardiff central from reading",
@@ -382,7 +389,7 @@
         {
           "entity": "Station",
           "startPos": 5,
-          "endPos": 5
+          "endPos": 6
         }
       ]
     }
