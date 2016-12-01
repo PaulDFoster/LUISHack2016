@@ -23,8 +23,35 @@ namespace LUISHack2016.Controllers
         public string Get(string destination, string origin)
         {
             // Looking up the NR Darwin information for location value.
+            NationalRail.LDBServiceSoapClient nr = new LUISHack2016.NationalRail.LDBServiceSoapClient();
+            NationalRail.AccessToken at = new NationalRail.AccessToken();
+            at.TokenValue = "90538ddb-a178-43b6-b587-0a2f08962a85";
 
-            return origin + " to " + destination;
+            // Resolve the Origin and Destinaton as CRS fields
+
+
+            NationalRail.StationBoard sb = nr.GetDepartureBoard(at, 4, "DIS", "NRW", NationalRail.FilterType.to,0, 0);
+
+            string response = "";
+
+            if(sb.areServicesAvailable)
+            {
+                response = "Next train to " + destination + " is the " + sb.trainServices[0].std + " from " + sb.trainServices[0].origin[0].locationName + " to " + sb.trainServices[0].destination[0].locationName;
+                if(sb.platformAvailable)
+                {
+                    response = response + " on platform " + sb.trainServices[0].platform + ". Is expected to arrive at " + sb.trainServices[0].std;
+                }
+                else
+                {
+                    response = response + " Is expected to arrive at " + sb.trainServices[0].std + " no platform stated.";
+                }
+            }
+            else
+            {
+                response = "No train service found. Use Uber?";
+            }
+
+            return response;
         }
 
         // POST api/values
