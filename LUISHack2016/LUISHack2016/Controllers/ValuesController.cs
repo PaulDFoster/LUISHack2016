@@ -22,6 +22,44 @@ namespace LUISHack2016.Controllers
         }
         public string Get(string destination, string origin)
         {
+            string crsDestintation = destination;
+            string crsOrigin = origin;
+
+            for (int i = 1; i <= 2; i++)
+            {
+                string station;
+
+                if (i == 1) { station = crsOrigin; }
+                else { station = crsDestintation; }
+
+                switch (station)
+                {
+                    case "norwich":
+                        station = "NRW";
+                        break;
+                    case "cambridge":
+                        station = "CBG";
+                        break;
+                    case "diss":
+                        station = "DIS";
+                        break;
+                    case "march":
+                        station = "MCH";
+                        break;
+                    case "witham":
+                        station = "WTM";
+                        break;
+                    case "ipswich":
+                        station = "IPS";
+                        break;
+                }
+
+                if (i == 1) { crsOrigin = station; }
+                else { crsDestintation = station; }
+            }
+
+
+
             // Looking up the NR Darwin information for location value.
             NationalRail.LDBServiceSoapClient nr = new LUISHack2016.NationalRail.LDBServiceSoapClient();
             NationalRail.AccessToken at = new NationalRail.AccessToken();
@@ -30,7 +68,7 @@ namespace LUISHack2016.Controllers
             // Resolve the Origin and Destinaton as CRS fields
 
 
-            NationalRail.StationBoard sb = nr.GetDepartureBoard(at, 4, "DIS", "NRW", NationalRail.FilterType.to,0, 0);
+            NationalRail.StationBoard sb = nr.GetDepartureBoard(at, 4, crsOrigin, crsDestintation, NationalRail.FilterType.to,0, 0);
 
             string response = "";
 
